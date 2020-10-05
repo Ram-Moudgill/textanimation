@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 70%;
+}
+body{
+    background-color: rgba(5, 10, 20, 0.911);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    color: white;
+    font-family: 'Sansita Swashed', cursive;
+}
+h1
+{
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 900;
+    font-size: 3rem;
+    padding-right: 5px;
+    animation: animate 4s linear infinite alternate-reverse both;
+}
+h1::before
+{
+    content: "Animation";
+    left: 0rem;
+    width: 100%;
+    color: hotpink;
+    overflow: hidden;
+    border-right: 0.2rem solid pink;
+    top: 0;
+    position: absolute;
+    animation: animate 4s linear infinite alternate-reverse both;
+    display: block;
+}
+@keyframes  animate {
+    0% {
+        width: 0%;
+       font-size: 3.7rem;
+       transform: scale(1.2);
+    } 
+    50%
+    {
+        width: 100%;
+        font-size: 3rem;
+        transform: scale(1);
+    }
+    100%
+    {
+        width: 0%;
+        font-size: 3rem;
+        transform: scale(1);
+    }
+}
